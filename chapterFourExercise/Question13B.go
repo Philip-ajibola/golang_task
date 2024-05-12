@@ -17,8 +17,9 @@ func main() {
 		}
 	}
 	for counter := 1; counter <= number; counter++ {
-		exponential += float64(1 / factorial1(counter))
+		exponential += 1.0 / float64(factorial1(counter))
 	}
+	fmt.Println("Exponentital is ", exponential)
 }
 func factorial1(num int) int {
 	for counter := num - 1; counter >= 1; counter-- {
