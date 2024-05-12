@@ -197,6 +197,7 @@ func displayReceipt() {
 	discountAmount := total * (float64(discount) / 100.0)
 	valueAddedTax := total * (17.5 / 100.0)
 	billTotal = total - discountAmount + valueAddedTax
+	balance := amountPaid - billTotal
 
 	fmt.Printf(`
 	-----------------------------------------------------------------------------
@@ -210,5 +211,5 @@ func displayReceipt() {
 	==============================================================================
 		Thank for the patronage  :)
 	==============================================================================
-`, total, discountAmount, "%", valueAddedTax, billTotal, billTotal)
+`, total, discountAmount, "%", valueAddedTax, billTotal, amountPaid, balance)
 }
