@@ -40,9 +40,7 @@ func collectUserResponse() string {
 	fmt.Print("Add More Item ")
 	fmt.Scan(&userResponse)
 	for !strings.EqualFold(userResponse, "Yes") && !strings.EqualFold(userResponse, "No") {
-		fmt.Print("Invalid Input")
-		var invalidInput string
-		fmt.Scan(&invalidInput)
+		fmt.Println("Invalid Input")
 		fmt.Print("Add More Item ")
 		fmt.Scan(&userResponse)
 	}
@@ -54,9 +52,7 @@ func CollectPriceOfItem() float64 {
 	fmt.Print("What's the price per unit ")
 	fmt.Scanf("%f", &pricePerUnit)
 	for pricePerUnit <= 0 {
-		fmt.Print("Please Enter Valid Price")
-		var invalidInput string
-		fmt.Scan(&invalidInput)
+		fmt.Println("Please Enter Valid Price")
 		fmt.Print("What's the price per unit ")
 		fmt.Scanf("%f", &pricePerUnit)
 	}
@@ -66,13 +62,11 @@ func CollectPriceOfItem() float64 {
 
 func collectNumberOfItemBought() int {
 	unit := 0
-	fmt.Print("How many did user Buy ")
+	fmt.Print("How many did Customer Buy ")
 	fmt.Scan(&unit)
 	for unit <= 0 {
-		fmt.Print("Please Enter Valid Unit ")
-		var invalidInput string
-		fmt.Scan(&invalidInput)
-		fmt.Print("How many did user Buy ")
+		fmt.Println("Please Enter Valid Unit ")
+		fmt.Print("How many did Customer Buy ")
 		fmt.Scan(&unit)
 	}
 	numberOfItems = append(numberOfItems, unit)
@@ -84,9 +78,8 @@ func collectItemsName() {
 	fmt.Print("what did the user buy ??? ")
 	fmt.Scan(&itemBought)
 	for len(itemBought) == 0 {
-		fmt.Print("Please Enter an Item Name")
-		var invalidInput string
-		fmt.Scan(&invalidInput)
+		fmt.Println("Please Enter an Item Name")
+
 		fmt.Print("what did the user buy ??? ")
 		fmt.Scan(&itemBought)
 	}
@@ -98,9 +91,7 @@ func collectBuyersName() {
 	fmt.Print("What's the customers name ")
 	fmt.Scan(&customerNames)
 	for !pattern.MatchString(strings.ToLower(customerNames)) {
-		fmt.Print("Please Enter A VaLid Name")
-		var invalidInput string
-		fmt.Scanln(&invalidInput)
+		fmt.Print("Please Enter A VaLid Name\n")
 		fmt.Print("What's the customers name ")
 		fmt.Scan(&customerNames)
 	}
@@ -110,9 +101,7 @@ func collectCashierName() {
 	fmt.Print("What is Your Name ")
 	fmt.Scan(&cashierName)
 	for len(cashierName) == 0 {
-		fmt.Print("Invalid Input ")
-		var invalidInput string
-		fmt.Scan(&invalidInput)
+		fmt.Println("Invalid Input ")
 		fmt.Print("What is Your Name ")
 		fmt.Scan(&cashierName)
 	}
@@ -172,9 +161,7 @@ func displayReceipt() {
 	fmt.Print("How Much Did The User Pay ")
 	fmt.Scanf("%f", &amountPaid)
 	for amountPaid < billTotal {
-		fmt.Print("Money Not Complete")
-		var invalidInput string
-		fmt.Scan(&invalidInput)
+		fmt.Print("Money Not Complete \n")
 		fmt.Print("How Much Did The User Pay ")
 		fmt.Scanf("%f", &amountPaid)
 	}
