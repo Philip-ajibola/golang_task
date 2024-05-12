@@ -144,7 +144,7 @@ func displayInvoice() {
 `, "ITEM", "QTY", "Price", "TotalAmount")
 
 	for counter := 0; counter < len(numberOfItems); counter++ {
-		fmt.Printf("%-20s\t%-20d\t%-20.2f\t%-20.2f", nameOfItems[counter], numberOfItems[counter], priceOFEachItem[counter], totalPricePerItem[counter])
+		fmt.Printf("      %-20s\t%-20d\t%-20.2f\t%-20.2f", nameOfItems[counter], numberOfItems[counter], priceOFEachItem[counter], totalPricePerItem[counter])
 		fmt.Println()
 	}
 	total := 0.0
